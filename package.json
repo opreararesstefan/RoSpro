@@ -1,11 +1,14 @@
-{
+
 "name": "RoSpro",
 "version": "1.0.0",
 "description": "ROS Project",
 "main": "server.js",
 "scripts": {
+ "client-install": "npm install --prefix client",
  "start": "node server.js",
- "server": "nodemon server.js"
+ "server": "nodemon server.js",
+ "client": "npm start --prefix client",
+ "dev": "concurrently \"npm run server\" \"npm run client\""
  },
  "author": "Rares Oprea",
  "license": "ISC",
