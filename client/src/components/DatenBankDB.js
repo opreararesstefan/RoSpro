@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, ListGroup, ListGroupItem. Button } from 'reactstrap';
+import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions'
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => ({
 	item: state.item
 })
 
-export default connect(mapStteToProps, { getItems, deleteItem })DatenBankDB;
+export default connect(mapStateToProps, { getItems, deleteItem })(DatenBankDB);

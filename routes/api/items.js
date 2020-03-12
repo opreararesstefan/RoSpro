@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 //Item Model
-const Item = require(',,/,,/models/Item');
+const Item = require('../../models/Item');
 
 // @route  Get api/items
 // @desc   Get All Items
 // @access Public
-route.get('/', (req, res) => {
+router.get('/', (req, res) => {
 	Item.find()
 	.sort({ date: -1 })
 	.then(items => res.json(items));
@@ -16,7 +16,7 @@ route.get('/', (req, res) => {
 // @route  Post api/items
 // @desc   Create a Item
 // @access Public
-route.post('/', (req, res) => {
+router.post('/', (req, res) => {
 	const newItem = new Item({
 		name: req.body.name
 	});
@@ -27,7 +27,7 @@ route.post('/', (req, res) => {
 // @route  Delete api/items
 // @desc   Delet a Item
 // @access Public
-route.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 	Item.findById(req.params.id)
 	  .then(item => item.remove().then(() => res.json({success: true})))
 	  .catch(err => res.status(404).jason({ success: false }));
