@@ -26,7 +26,7 @@ export default function(state = initialState, action) {
 		case ITEMS_LOADING:
 			return {
 				...state,
-				loading: true
+				loading: false
 			}
 		default:
 			return state;
