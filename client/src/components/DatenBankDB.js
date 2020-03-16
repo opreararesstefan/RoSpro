@@ -51,6 +51,6 @@ DatenBankDB.propTypes = {
 
 const mapStateToProps = (state) => ({
 	item: state.item
-})
+});
 
 export default connect(mapStateToProps, { getItems, deleteItem })(DatenBankDB);
