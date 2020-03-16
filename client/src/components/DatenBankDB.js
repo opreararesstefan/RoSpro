@@ -22,7 +22,7 @@ class DatenBankDB extends Component
 				<ListGroup>
 					<TransitionGroup className = "DatenBankMongoDB">
 					{items.map(({ _id, name }) => (
-						<CSSTransition key = {_id} timeout={500} className = "fade">
+				return(		<CSSTransition key = {_id} timeout={500} className = "fade">
 							<ListGroupItem>
 								<Button
 									className = "remove-btn"
@@ -34,7 +34,7 @@ class DatenBankDB extends Component
 								</Button>
 								{name}
 							</ListGroupItem>
-						</CSSTransition>
+						</CSSTransition> 	 )
 					))}
 					</TransitionGroup>
 				</ListGroup>
