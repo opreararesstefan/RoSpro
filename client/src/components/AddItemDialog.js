@@ -12,7 +12,7 @@ import {
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 
-class ItemModal extends Component {
+class AddItemDialog extends Component {
 	state = {
 		modal: false,
 		name: ''
@@ -85,4 +85,4 @@ const mapStateToProps = state => ({
 	item: state.item
 });
 
-export default connect(mapStateToProps, { addItem })(ItemModal);
+export default connect(mapStateToProps, { addItem })(AddItemDialog);

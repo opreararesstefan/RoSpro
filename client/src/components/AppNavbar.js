@@ -10,29 +10,42 @@ import {
 	Container
 } from 'reactstrap';
 
-class AppNavbar extends Component 
-{ 
+
+class AppNavbar extends Component {
+
 	state = {
 		isOpen: false
 	}
-	
+
 	toggle = () => {
 		this.setState({
 			isOpen: !this.state.isOpen
 		});
 	}
-	
+
 	render() {
-		return(
+		return (
 			<div>
-				<Navbar color = "dark" dark expand = "sm" className = "mb-5">
+				<Navbar color="dark" dark expand="sm" className="mb-5">
 					<Container>
-						<NavbarBrand href = "/"> DatenBankDB</NavbarBrand>
-						<NavbarToggler onClick = {this.toggle} />
-						<Collapse isOpen = {this.state.isOpen} navbar>
-							<Nav className = "ml-auto" navbar>
+						<NavbarBrand href="/"> opreaWeb</NavbarBrand>
+						<NavbarToggler onClick={this.toggle} />
+						<Collapse isOpen={this.state.isOpen} navbar>
+							<Nav className="ml-auto" navbar>
 								<NavItem>
-									<NavLink href = "https://github.com/opreararesstefan">Github</NavLink>
+									<NavLink href="/Contact/">Contact</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/Lebenslauf/">Lebenslauf</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/Portfolio/">Portfolio</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/DatenBank/">DatenBank</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="https://github.com/opreararesstefan">Github</NavLink>
 								</NavItem>
 							</Nav>
 						</Collapse>
