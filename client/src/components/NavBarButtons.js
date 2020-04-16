@@ -2,13 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { contact, portfolio, lebenslauf } from '../actions/itemActions';
 import {
-	Collapse,
-	Navbar,
-	NavbarToggler,
-	NavbarBrand,
 	Nav,
 	NavItem,
-	Container,
 	Button
 } from 'reactstrap';
 
