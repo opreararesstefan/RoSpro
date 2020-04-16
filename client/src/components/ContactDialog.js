@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import pozaContact from '../_FilesProd/pozaContact.jpeg';
+import { contact } from '../actions/itemActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class ContactDialog extends Component {
+    componentDidMount() {
+		this.props.contact();
+	}
     render() {
         return (
             <div>
@@ -58,4 +64,12 @@ class ContactDialog extends Component {
     }
 }
 
-export default ContactDialog;
+ContactDialog.propTypes = {
+	contact : PropTypes.func.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    defaultState: state
+});
+
+export default connect(mapStateToProps, { contact })(ContactDialog);

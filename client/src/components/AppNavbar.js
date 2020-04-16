@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
+import NavBarButtons from './NavBarButtons';
 import {
 	Collapse,
 	Navbar,
 	NavbarToggler,
 	NavbarBrand,
-	Nav,
-	NavItem,
-	NavLink,
-	Container
+	Container,
+	Button
 } from 'reactstrap';
-
 
 class AppNavbar extends Component {
 
 	state = {
-		isOpen: false
+		isOpen: false,
 	}
 
 	toggle = () => {
@@ -31,23 +29,7 @@ class AppNavbar extends Component {
 						<NavbarBrand href="/"> opreaWeb</NavbarBrand>
 						<NavbarToggler onClick={this.toggle} />
 						<Collapse isOpen={this.state.isOpen} navbar>
-							<Nav className="ml-auto" navbar>
-								<NavItem>
-									<NavLink href="/Contact/">Contact</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink href="/Lebenslauf/">Lebenslauf</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink href="/Portfolio/">Portfolio</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink href="/DatenBank/">DatenBank</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink href="https://github.com/opreararesstefan">Github</NavLink>
-								</NavItem>
-							</Nav>
+							<NavBarButtons />
 						</Collapse>
 					</Container>
 				</Navbar>
@@ -55,5 +37,4 @@ class AppNavbar extends Component {
 		);
 	}
 }
-
-export default AppNavbar;
+export default AppNavbar
