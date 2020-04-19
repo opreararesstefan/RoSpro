@@ -6,7 +6,6 @@ import {
 	NavbarToggler,
 	NavbarBrand,
 	Container,
-	Button
 } from 'reactstrap';
 
 class AppNavbar extends Component {
@@ -37,4 +36,5 @@ class AppNavbar extends Component {
 		);
 	}
 }
+
 export default AppNavbar

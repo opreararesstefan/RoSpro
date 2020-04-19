@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { lebenslauf } from '../actions/itemActions';
+import { lebenslauf } from '../../actions/itemActions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import data from './Lebenslauf/data'
-import bildungdata from './Lebenslauf/bildungdata'
-import Table from './Lebenslauf/Table'
-import Contact from './Lebenslauf/Contact'
-import Bildungsweg from './Lebenslauf/Bildungsweg'
+import data from './data'
+import bildungdata from './bildungdata'
+import Table from './Table'
+import Contact from './Contact'
+import Bildungsweg from './Bildungsweg'
 
 class LebenslaufDialog extends Component {
     componentDidMount() {

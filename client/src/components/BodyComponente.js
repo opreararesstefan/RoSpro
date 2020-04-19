@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
 import ContactDialog from './ContactDialog'
-import DatenBankDB from './DatenBankDialog'
-import LebenslaufDialog from './LebenslaufDialog'
+import PortfolioDialog from './Portfolio/PortfolioDialog'
+import LebenslaufDialog from './Lebenslauf/LebenslaufDialog'
 import { Container } from 'reactstrap';
-
 
 function BodyComponente() {
   const navBarTab = JSON.stringify(useSelector(state => state.navBarTab)).slice(16).split('"}')
@@ -30,7 +29,7 @@ function BodyComponente() {
     return (
       <div>
       <Container>
-        <DatenBankDB/>
+        <PortfolioDialog/>
       </Container>
       </div>
     )

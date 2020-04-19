@@ -48,7 +48,7 @@ class ContactDialog extends Component {
                     Weiterentwicklung auf Führungsebene.
                     </li>
                     <li>Ich beherrsche alle gängigen Programmiersprachen auf
-                    verschiedenen Systemen und bin es gewohnt,
+                    verschiedenen Systemen und bin gewohnt,
                     eigenverantwortlich nach Lösungen zu suchen und auch
                     größere Projekte zu leiten.
                     </li>

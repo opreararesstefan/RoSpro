@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Description from './Description';
-import { Button } from 'reactstrap';
 
 const TableBody = props => {
     const jobList = props.bildungdata.map((row, index) => {
@@ -75,7 +74,6 @@ const SoftSkills = () => {
                 <li>Hohe Belastbarkeit</li>
                 <li>Stressresistent</li>
             </ul>
-            <Button><a href="https://github.com/opreararesstefan/lebenslaufSrc">View source on Github</a></Button>
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React, { Component} from 'react';
 import { CONTACT, LEBENSLAUF, PORTFOLIO, GET_ITEMS, ADD_ITEMS, DELETE_ITEM, ITEMS_LOADING } from './types';
 
 export const setItemsLoading = () => {

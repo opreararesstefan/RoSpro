@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { contact, portfolio, lebenslauf } from '../actions/itemActions';
 import {
 	Nav,
@@ -8,7 +8,6 @@ import {
 } from 'reactstrap';
 
 function NavBarButtons() {
-  const navBarTab = useSelector(state => state.navBarReducer);
   const dispatch = useDispatch();
   return (
     <Nav className="ml-auto" navbar>

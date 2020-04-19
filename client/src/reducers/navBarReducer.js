@@ -1,5 +1,4 @@
 import { CONTACT, LEBENSLAUF, PORTFOLIO } from '../actions/types';
-import { useSelector, useDispatch } from 'react-redux';
 
 const initialState = {
 	actualState: CONTACT
