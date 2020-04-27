@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import DatenBankDialog from './DatenBank/DatenBankDialog'
+import DatenBankDialog from './DatenBank/DatenBankDialog';
+import SnakeGameDialog from './SnakeGame/SnakeGameDialog'
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -14,7 +15,7 @@ class PortfolioDialog extends Component {
             case 0:
                 return <DatenBankDialog />
             case 1:
-                return "Mai asteapta! Inca nu e gata"
+                return <SnakeGameDialog />
             default:
                 return <DatenBankDialog />
         }
