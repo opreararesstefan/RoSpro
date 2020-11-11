@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import pozacv from '../../_FilesProd/pozacv.jpg';
+import { Button } from 'reactstrap';
 
 class Contact extends Component {
     render() {
         return (
             <div className="float-right vertical-center">
+                <a href='/Lebenslauf.pdf' download><Button className="float-right vertical-center">
+                    Download als PDF Format</Button></a>
                 <h1>Lebenslauf</h1>
                 <div>
                     <a href="http://www.opreaweb.com/images/pozacv.jpg"><img src={pozacv} alt='pozacv' height="180" width="230" /></a>
@@ -30,7 +33,7 @@ class Contact extends Component {
                     </tr>
                     <tr>
                         <td> <strong>Familienstand:</strong></td>
-                        <td> Verheiratet, 1 Kind</td>
+                        <td> Verheiratet, 2 Kind</td>
                     </tr>
                     </tbody>
                 </table>
@@ -46,12 +49,6 @@ Weiterentwicklung auf Führungsebene.
 verschiedenen Systemen und bin gewohnt,
 eigenverantwortlich nach Lösungen zu suchen und auch
 größere Projekte zu leiten.
-                    </li>
-                    <li>Meine Kunden schätzen besonders an mir, dass ich dank
-meiner analytischen Fähigkeiten und den
-umfangreichen Kenntnissen auf dem digitalen Sektor
-auch extrem komplexe Sachverhalte schnell erfassen
-und sehr individuelle Sonderwünsche realisieren kann.
                     </li>
                 </ul>
             </div>

@@ -9,6 +9,17 @@ app.use(bodyParser.json());
 
 const db = require('./config/keys').mongoURI;
 
+
+function log (request, paths) {
+  try {
+    console.log(require.resolve(request, { paths }))
+  } catch (err) {
+	console.log('Poza 1 ', request,  "/1.jpg"
+	)
+  }
+}
+
+
 //Connect to Mongo
 mongoose
   .connect(db)

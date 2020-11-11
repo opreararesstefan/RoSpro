@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import NavBarButtons from './NavBarButtons';
+import React, { useState } from 'react';
 import {
 	Collapse,
 	Navbar,
@@ -7,34 +6,44 @@ import {
 	NavbarBrand,
 	Container,
 } from 'reactstrap';
+import { useDispatch } from 'react-redux'
+import { contact, portfolio, lebenslauf } from '../actions/itemActions';
+import {
+	Nav,
+	NavItem,
+	Button
+} from 'reactstrap';
 
-class AppNavbar extends Component {
 
-	state = {
-		isOpen: false,
-	}
+function AppNavbar(props) {
 
-	toggle = () => {
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
-	}
-
-	render() {
-		return (
-			<div>
-				<Navbar color="dark" dark expand="sm" className="mb-5">
-					<Container>
-						<NavbarBrand href="/"> opreaWeb</NavbarBrand>
-						<NavbarToggler onClick={this.toggle} />
-						<Collapse isOpen={this.state.isOpen} navbar>
-							<NavBarButtons />
-						</Collapse>
-					</Container>
-				</Navbar>
-			</div>
-		);
-	}
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => setIsOpen(!isOpen);
+	const dispatch = useDispatch();
+	return (
+		<div>
+			<Navbar color="dark" dark expand="sm" className="mb-5">
+				<Container>
+					<NavbarBrand href="/"> opreaWeb</NavbarBrand>
+					<NavbarToggler onClick={toggle} >More</NavbarToggler>
+					<Collapse isOpen={isOpen} navbar>
+						<Nav className="ml-auto" navbar>
+							<NavItem>
+								<Button onClick={function () { dispatch(portfolio()); toggle(); }}>Portfolio</Button>
+							</NavItem>
+							<NavItem>
+								<Button onClick={function () { dispatch(lebenslauf()); toggle(); }}>Lebenslauf</Button>
+							</NavItem>
+							<NavItem>
+								<Button onClick={function () { dispatch(contact()); toggle(); }}>Contact</Button>
+							</NavItem>
+						</Nav>
+					</Collapse>
+				</Container>
+			</Navbar>
+		</div>
+	);
 }
+
 
 export default AppNavbar

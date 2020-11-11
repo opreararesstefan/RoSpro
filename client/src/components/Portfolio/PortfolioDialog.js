@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import DatenBankDialog from './DatenBank/DatenBankDialog';
-import SnakeGameDialog from './SnakeGame/SnakeGameDialog'
+import SnakeGameDialog from './SnakeGame/SnakeGameDialog';
+import TreeJsBoxDialog from './ThreeJsBox/ThreeJsBoxDialog';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 class PortfolioDialog extends Component {
-    
+
     state = {
-        actualState: 0
+        actualState: 2
     }
 
     compo = () => {
@@ -16,6 +16,8 @@ class PortfolioDialog extends Component {
                 return <DatenBankDialog />
             case 1:
                 return <SnakeGameDialog />
+            case 2:
+                return <TreeJsBoxDialog />
             default:
                 return <DatenBankDialog />
         }
@@ -27,6 +29,11 @@ class PortfolioDialog extends Component {
                 <Container>
                     <ListGroup>
                         <ListGroupItem>
+                        <Button
+                                className="secondary"
+                                size="sm"
+                                onClick={() => this.setState({ actualState: 2, })}
+                            >Univers</Button>
                             <Button
                                 className="secondary"
                                 size="sm"
@@ -40,13 +47,18 @@ class PortfolioDialog extends Component {
                             <Button
                                 className="secondary"
                                 size="sm"
+                                href="https://github.com/opreararesstefan/Recongnize_Text_Console" target="blank"
+                            >C# Project </Button>
+                            <Button
+                                className="secondary"
+                                size="sm"
                                 href="https://github.com/opreararesstefan" target="blank"
-                            >Github Src</Button>
+                            >Github Repositories</Button>
                             <Button
                                 className="secondary"
                                 size="sm"
                                 href="http://opreararesstefan.github.io" target="blank"
-                            >AlteProjekte</Button>
+                            >Alte Projekte</Button>
                         </ListGroupItem>
                     </ListGroup>
                 </Container>

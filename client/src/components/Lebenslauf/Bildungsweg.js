@@ -34,9 +34,21 @@ const Programmiersprachen = () => {
     return (
         <div>
             <h5>Programmiersprachen: </h5>
-            <ul><li>Sehr gute Kenntnisse insbesondere in C#, Javascript, JSX (ES6), 
-                Java, PHP, MongoDB, Express, React, NodeJs, NPM, Yarn, Mongoose, Phyton, 
-                Django, HTML, CSS, SQL, C++,  Pascal, QT, UML,  Git Launch4J, Git, Heroku 
+            <ul><li>Sehr gute Kenntnisse insbesondere in C#, Javascript, HTML, CSS
+            </li></ul>
+            <h5>Tools und Softwares: </h5>
+            <ul><li>Sehr gute Kenntnisse insbesondere in AzureDevOps, Hyper-V, Ranorex, 
+            MSTest, ReSharper, Team Foundation Server, NUnit, Nuget, JSX (ES6),
+            MongoDB, Express, React, NodeJs, NPM, Yarn, Mongoose,
+            Git, Heroku.
+            </li>
+            <li>
+            Bibliotheken: Microsoft.Interop.Excel, Microsoft.Interop.Office,
+            MigraDoc, Pdf2Png, PdfSharper.
+            </li>
+            </ul>
+            <h5>Technologies: </h5>
+            <ul><li> .NET, WPF, win32
             </li></ul>
         </div>
     )
@@ -46,7 +58,7 @@ const Betriebssysteme = () => {
     return (
         <div>
             <h5>Betriebssysteme: </h5>
-            <ul><li>Versiert auf Microsoft Windows </li></ul>
+            <ul><li>Versiert auf Microsoft Windows, Linux </li></ul>
         </div>
     )
 }
@@ -83,7 +95,7 @@ class Bildungsweg extends Component {
         const { bildungdata } = this.props;
         return (
             <div >
-                <TableBody 
+                <TableBody
                     bildungdata={bildungdata}
                 />
                 <WeitereKenntnise />

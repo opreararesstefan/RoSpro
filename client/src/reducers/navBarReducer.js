@@ -1,7 +1,7 @@
 import { CONTACT, LEBENSLAUF, PORTFOLIO } from '../actions/types';
 
 const initialState = {
-	actualState: CONTACT
+	actualState: PORTFOLIO
 }
 
 const navBarReducer = function (state = initialState, action) {
